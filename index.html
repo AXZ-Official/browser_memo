@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//ja"
+<link rel="icon" type="image/png" href=none>
+
+<head prefix="og: https://ogp.me/ns#">
+<meta property="og:url" content="https://axz-official.github.io/browser_memo/" />
+<meta property="og:type" content=" website " />
+<meta property="og:title" content="ブラウザメモ帳" />
+<meta property="og:description" content="
+・メモ帳を開かなくてもメモができる<br>
+・サイトがシンプルで軽い<br>
+・送信機能が無いから誤送信の心配不要<br>
+・気になった文章をとりあえずコピーペースト<br>
+・広告は一切表示されません" />
+<meta property="og:site_name" content="AXZ公式〆ブラウザメモ帳" />
+<meta property="og:image" content="https://github.com/AXZ-Official/browser_memo/raw/main/images/thumbnail.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>ブラウザメモ帳</title>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</head>
+<body>
+  <table width="785" border="0" cellpadding="5" cellspacing="0">
+    <tr>
+      <td valign="top"><h1>ブラウザメモ帳</h1></td>
+      <td><h4><strong>・メモ帳を開かなくてもメモができる（タブブラウザでさらに便利）<br>
+      ・軽い<br>
+      ・送信機能が無いから安心<br>
+      ・気になった文章をとりあえずコピーペースト</strong></h4></td>
+    </tr>
+  </table>
+  <br>
+  <form>
+    <input type="text" size="50" placeholder="タイトル名">
+    （１）
+    <br>
+    <textarea rows="12" cols="110"></textarea>
+    <br><br>
+    <input type="text" size="50" placeholder="タイトル名">
+    （２）
+    <br>
+    <textarea rows="12" cols="110"></textarea>
+    <br><br>
+    <input type="text" size="50" placeholder="タイトル名">
+    （３）
+    <br>
+    <textarea rows="12" cols="110"></textarea>
+    <br><br>
+    <input type="text" size="50" placeholder="タイトル名">
+    （４）
+    <br>
+    <textarea rows="12" cols="110"></textarea>
+    <br><br>
+    <input type="text" size="50" placeholder="タイトル名">
+    （５）
+    <br>
+    <textarea rows="12" cols="110"></textarea>
+    <br><br>
+    <input type="text" size="50" placeholder="タイトル名">
+    （６）
+    <br>
+    <textarea rows="12" cols="110"></textarea>
+    <br><br>
+    <input type="text" size="50" placeholder="タイトル名">
+    （７）
+    <br>
+    <textarea rows="12" cols="110"></textarea>
+    <br><br>
+    <input type="text" size="50" placeholder="タイトル名">
+    （８）
+    <br>
+    <textarea rows="12" cols="110"></textarea>
+    <br><br>
+    <input type="text" size="50" placeholder="タイトル名">
+    （９）
+    <br>
+    <textarea rows="12" cols="110"></textarea>
+    <br><br>
+    <input type="text" size="50" placeholder="タイトル名">
+    （１０）
+    <br>
+    <textarea rows="12" cols="110"></textarea>
+    <br><br>
+    
+    <input type="button" value="保存する" onclick="saveTextAsFile()">
+  </form>
+  <div align="center">
+    &lt;PR&gt;<em><a href="https://bit.ly/join-button">Discordサーバー</a></em>
+  </div>
+  <div align="center"><em>© 2023 Team AXZ.</em></div>
+  <script type="text/javascript">
+  <!--
+  document.write("<img src='http://abc.drpartners.jp/acc/acclog.cgi?");
+  document.write("referrer="+document.referrer+"&");
+  document.write("width="+screen.width+"&");
+  document.write("height="+screen.height+"&");
+  document.write("color="+screen.colorDepth+"'>");
+  // -->
+  function saveTextAsFile() {
+  var textToSave = '';
+  for (var i = 1; i <= 10; i++) {
+  var title = document.querySelector('input:nth-of-type(' + i + ')').value;
+  var textarea = document.querySelector('textarea:nth-of-type(' + i + ')');
+  if (textarea.value) {
+    textToSave += '【' + title + '】\n' + textarea.value + '\n\n';
+  }
+}
+
+
+  var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+  var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+  var fileNameToSaveAs = 'memo.txt';
+
+  var downloadLink = document.createElement("a");
+  downloadLink.download = fileNameToSaveAs;
+  downloadLink.innerHTML = "Download File";
+  downloadLink.href = textToSaveAsURL;
+  downloadLink.onclick = destroyClickedElement;
+  downloadLink.style.display = "none";
+  document.body.appendChild(downloadLink);
+
+  downloadLink.click();
+}
+
+
+
+function destroyClickedElement(event) {
+  document.body.removeChild(event.target);
+}
+  </script>
+  </body>
+  </html>
