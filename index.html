@@ -36,52 +36,52 @@
   </table>
   <br>
   <form>
-    <input type="text" size="50" placeholder="タイトル名">
+    <input id="t1" type="text" size="50" placeholder="タイトル名">
     （１）
     <br>
     <textarea rows="12" cols="110"></textarea>
     <br><br>
-    <input type="text" size="50" placeholder="タイトル名">
+    <input id="t2" type="text" size="50" placeholder="タイトル名">
     （２）
     <br>
     <textarea rows="12" cols="110"></textarea>
     <br><br>
-    <input type="text" size="50" placeholder="タイトル名">
+    <input id="t3" type="text" size="50" placeholder="タイトル名">
     （３）
     <br>
     <textarea rows="12" cols="110"></textarea>
     <br><br>
-    <input type="text" size="50" placeholder="タイトル名">
+    <input id="t4" type="text" size="50" placeholder="タイトル名">
     （４）
     <br>
     <textarea rows="12" cols="110"></textarea>
     <br><br>
-    <input type="text" size="50" placeholder="タイトル名">
+    <input id="t5" type="text" size="50" placeholder="タイトル名">
     （５）
     <br>
     <textarea rows="12" cols="110"></textarea>
     <br><br>
-    <input type="text" size="50" placeholder="タイトル名">
+    <input id="t6" type="text" size="50" placeholder="タイトル名">
     （６）
     <br>
     <textarea rows="12" cols="110"></textarea>
     <br><br>
-    <input type="text" size="50" placeholder="タイトル名">
+    <input id="t7" type="text" size="50" placeholder="タイトル名">
     （７）
     <br>
     <textarea rows="12" cols="110"></textarea>
     <br><br>
-    <input type="text" size="50" placeholder="タイトル名">
+    <input id="t8" type="text" size="50" placeholder="タイトル名">
     （８）
     <br>
     <textarea rows="12" cols="110"></textarea>
     <br><br>
-    <input type="text" size="50" placeholder="タイトル名">
+    <input id="t9" type="text" size="50" placeholder="タイトル名">
     （９）
     <br>
     <textarea rows="12" cols="110"></textarea>
     <br><br>
-    <input type="text" size="50" placeholder="タイトル名">
+    <input id="t10" type="text" size="50" placeholder="タイトル名">
     （１０）
     <br>
     <textarea rows="12" cols="110"></textarea>
@@ -126,12 +126,98 @@
 
   downloadLink.click();
 }
-
-
-
-function destroyClickedElement(event) {
-  document.body.removeChild(event.target);
-}
+document.addEventListener("DOMContentLoaded", function() {
+    var t1 = document.getElementById("t1");
+    var savedValue = localStorage.getItem("t1");
+    if (savedValue) {
+        t1.value = savedValue;
+    }
+    var t2 = document.getElementById("t2");
+    var savedValue = localStorage.getItem("t2");
+    if (savedValue) {
+        t2.value = savedValue;
+    }
+      var t3 = document.getElementById("t3");
+    var savedValue = localStorage.getItem("t3");
+    if (savedValue) {
+        t3.value = savedValue;
+    }
+      var t4 = document.getElementById("t4");
+    var savedValue = localStorage.getItem("t4");
+    if (savedValue) {
+        t4.value = savedValue;
+    }
+      var t5 = document.getElementById("t5");
+    var savedValue = localStorage.getItem("t5");
+    if (savedValue) {
+        t5.value = savedValue;
+    }
+      var t6 = document.getElementById("t6");
+    var savedValue = localStorage.getItem("t6");
+    if (savedValue) {
+        t6.value = savedValue;
+    }
+      var t7 = document.getElementById("t7");
+    var savedValue = localStorage.getItem("t7");
+    if (savedValue) {
+        t7.value = savedValue;
+    }
+      var t8 = document.getElementById("t8");
+    var savedValue = localStorage.getItem("t8");
+    if (savedValue) {
+        t8.value = savedValue;
+    }
+      var t9 = document.getElementById("t9");
+    var savedValue = localStorage.getItem("t9");
+    if (savedValue) {
+        t9.value = savedValue;
+    }
+      var t10 = document.getElementById("t10");
+    var savedValue = localStorage.getItem("t10");
+    if (savedValue) {
+        t10.value = savedValue;
+    }
+});
+document.getElementById("t1").addEventListener("input", function() {
+    var textboxValue = this.value;
+    localStorage.setItem("t1", textboxValue);
+});
+    document.getElementById("t2").addEventListener("input", function() {
+    var textboxValue = this.value;
+    localStorage.setItem("t2", textboxValue);
+});
+    document.getElementById("t3").addEventListener("input", function() {
+    var textboxValue = this.value;
+    localStorage.setItem("t3", textboxValue);
+});
+    document.getElementById("t4").addEventListener("input", function() {
+    var textboxValue = this.value;
+    localStorage.setItem("t4", textboxValue);
+});
+    document.getElementById("t5").addEventListener("input", function() {
+    var textboxValue = this.value;
+    localStorage.setItem("t5", textboxValue);
+});
+    document.getElementById("t6").addEventListener("input", function() {
+    var textboxValue = this.value;
+    localStorage.setItem("t6", textboxValue);
+});
+    document.getElementById("t7").addEventListener("input", function() {
+    var textboxValue = this.value;
+    localStorage.setItem("t7", textboxValue);
+});
+    document.getElementById("t8").addEventListener("input", function() {
+    var textboxValue = this.value;
+    localStorage.setItem("t8", textboxValue);
+});
+    document.getElementById("t9").addEventListener("input", function() {
+    var textboxValue = this.value;
+    localStorage.setItem("t9", textboxValue);
+});
+    document.getElementById("t10").addEventListener("input", function() {
+    var textboxValue = this.value;
+    localStorage.setItem("t10", textboxValue);
+});
   </script>
   </body>
   </html>
