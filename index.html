@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//ja"
 
 <head prefix="og: https://ogp.me/ns#">
-<meta property="og:url" content="https://axz-official.github.io/browser_memo/" />
+<meta property="og:url" content="https://shadow-axis.github.io/browser_memo/" />
 <meta property="og:type" content=" website " />
 <meta property="og:title" content="ブラウザメモ帳" />
 <meta property="og:description" content="
@@ -11,7 +11,7 @@
 ・気になった文章をとりあえずコピペ<br>
 ・広告は一切表示されません" />
 <meta property="og:site_name" content="星影帝国公式〆ブラウザメモ帳" />
-<meta property="og:image" content="https://github.com/AXZ-Official/browser_memo/raw/main/images/thumbnail.png" />
+<meta property="og:image" content="https://github.com/Shadow-Axis/browser_memo/raw/main/images/thumbnail.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="theme-color" content="#ffffff">
 
@@ -86,13 +86,12 @@
     <br>
     <textarea id="c10" rows="12" cols="110"></textarea>
     <br><br>
-    
     <input type="button" value="保存する" onclick="saveTextAsFile()">
   </form>
   <div align="center">
-    &lt;PR&gt;<em><a href="https://bit.ly/join-button">Discordサーバー</a></em>
+    &lt;PR&gt;<em><a href="https://discord.gg/X2jYXPETRq">Discordサーバー</a></em>
   </div>
-  <div align="center"><em>© 2023 Team AXZ.</em></div>
+  <div align="center"><em>© 2024 Shadow Axis</em></div>
   <script type="text/javascript">
   <!--
   document.write("<img src='http://abc.drpartners.jp/acc/acclog.cgi?");
@@ -120,7 +119,7 @@
   downloadLink.download = fileNameToSaveAs;
   downloadLink.innerHTML = "Download File";
   downloadLink.href = textToSaveAsURL;
-  downloadLink.onclick = destroyClickedElement;
+  downloadLink.onclick = () => this.remove;
   downloadLink.style.display = "none";
   document.body.appendChild(downloadLink);
 
